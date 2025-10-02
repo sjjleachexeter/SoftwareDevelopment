@@ -17,10 +17,14 @@ public class UggRock {
 
     @Override 
     public String toString() {
-        
+        String stringsize = 
     }
 
-    private String formatName(String name){
+    private String formatName(){
+        switch (size) {
+            case bigun:
+                return "Bigun"
+        }
         String lower =  name.toLowerCase();
         String replaced = lower.replace("_", "-");
 
