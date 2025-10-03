@@ -1,3 +1,5 @@
+
+
 public class UggRock {
     private UggRockSize size;
     private UggRockType type;
@@ -14,22 +16,12 @@ public class UggRock {
     public UggRockSize RockSize() {
         return size;
     }
-
-    @Override 
-    public String toString() {
-        String stringsize = 
+ 
+    public String toString(UggRockSize size, UggRockType type) {
+        return "The rock is a " + type + size;
     }
 
-    private String formatName(){
-        switch (size) {
-            case bigun:
-                return "Bigun"
-        }
-        String lower =  name.toLowerCase();
-        String replaced = lower.replace("_", "-");
-
-        return replaced;
+    public int rockValue() {
+        return size.getMultiplierValue() * type.getMultiplierValue();
     }
-
-
 }
